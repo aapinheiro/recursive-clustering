@@ -25,7 +25,7 @@ O algoritmo segue uma abordagem top-down:
 
 ## Exemplo de uso 
 ```python
-from recursive_kmeans import RecursiveClustering
+from recursive_clustering import RecursiveClustering
 
 # Definindo o clusterizador
 rc = RecursiveClustering(
