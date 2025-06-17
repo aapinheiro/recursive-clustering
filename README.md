@@ -11,7 +11,7 @@ KMeans tradicional pode formar clusters muito desbalanceados. Já o `recursive-k
 Você pode instalar via GitHub:
 
 ```bash
-pip install git+https://github.com/seuusuario/recursive-kmeans.git
+pip install git+https://github.com/aapinheiro/recursive_clustering
 ```
 
 ## Como funciona
