@@ -4,7 +4,7 @@
 
 ## Por que usar Recursive KMeans?
 
-KMeans tradicional pode formar clusters muito desbalanceados. Já o `recursive-kmeans` resolve isso ao dividir recursivamente os dados em clusters menores, respeitando limites configuráveis de tamanho.
+KMeans tradicional pode formar clusters muito desbalanceados. Já o `recursive-clustering` resolve isso ao dividir recursivamente os dados em clusters menores, respeitando limites configuráveis de tamanho.
 
 ## Instalação
 
