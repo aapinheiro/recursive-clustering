@@ -316,6 +316,8 @@ class RecursiveClusteringVisualizer:
         for i, cid in enumerate(unique_ids):
             mask  = clustered_df["cluster"] == cid
             pts   = clustered_df[mask][self.rc.geoloc_columns].values
+            if len(pts) == 0:
+                continue
             color = self.color_map.get(cid, _PALETTE[i % len(_PALETTE)])
 
             if show_hulls and len(pts) >= 3:
@@ -506,8 +508,7 @@ class RecursiveClusteringVisualizer:
             )
 
             # Separador
-            ax_info.axhline(0.64, xmin=0.05, xmax=0.95, color="#DDD", lw=0.8,
-                            transform=ax_info.transAxes)
+            ax_info.axhline(0.64, xmin=0.05, xmax=0.95, color="#DDD", lw=0.8)
 
             # Estatísticas
             n_done    = int((labels >= 0).sum())
@@ -530,8 +531,7 @@ class RecursiveClusteringVisualizer:
                 y_s -= 0.083
 
             # Separador
-            ax_info.axhline(0.20, xmin=0.05, xmax=0.95, color="#DDD", lw=0.8,
-                            transform=ax_info.transAxes)
+            ax_info.axhline(0.20, xmin=0.05, xmax=0.95, color="#DDD", lw=0.8)
 
             # Legenda de cores
             legend_items = [

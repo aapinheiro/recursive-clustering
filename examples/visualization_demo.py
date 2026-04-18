@@ -10,8 +10,8 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import sys, os
 
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
-from recursive_kmeans.visualizer import fit_and_visualize
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "recursive-kmeans"))
+from visualizer import fit_and_visualize
 
 
 # ─── Dados sintéticos: 4 regiões geográficas com pontos espalhados ──────────
@@ -47,8 +47,8 @@ viz = fit_and_visualize(
     df,
     geoloc_columns=["latitude", "longitude"],
     vars_encode=["cliente_id"],
-    min_cluster_size=5,
-    max_cluster_size=15,
+    min_cluster_size=10,
+    max_cluster_size=20,
     encode=True,
 )
 
